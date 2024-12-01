@@ -229,3 +229,62 @@ p {
     }
   }
 }
+
+.expl {
+  padding: 0 110px;
+
+  &-header {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  &-list {
+    margin-top: 32px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      width: 227px;
+      min-height: 280px;
+    }
+
+    &__num {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+    }
+
+    &__block {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 80px;
+      height: 80px;
+      background-color: #68b738;
+
+      img {
+        max-width: 30px;
+      }
+    }
+
+    &__descr {
+      margin-top: 31px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
