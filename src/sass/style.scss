@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul,
+li,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 110px;
+}
+
+.menu {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 110px;
+}
+
+.menu-logo img {
+  max-height: 40px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  gap: 35px;
+}
+
+.menu-list__item {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.menu-list__item a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.menu-list__item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.menu-list__item a:hover::after {
+  width: 100%;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+  min-height: 696px;
+  background-color: #ffffff;
+
+  .promo-text {
+    max-width: 50%;
+    margin: 225px 0 0 185px;
+
+    &__title {
+      max-width: 415px;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      color: #000000;
+    }
+
+    &__subtitle {
+      margin-top: 40px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    &__btn {
+      margin-top: 52px;
+      padding: 14px 26px;
+      background-color: #34b643;
+      cursor: pointer;
+
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      font-weight: 400;
+      font-size: 20px;
+      border: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #5eaa2f;
+      }
+    }
+  }
+
+  .promo-bg {
+    position: relative;
+    max-width: 50%;
+
+    &__img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 552px;
+    }
+  }
+}
