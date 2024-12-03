@@ -29,10 +29,6 @@ p {
   padding: 0;
 }
 
-.container {
-  padding: 0 110px;
-}
-
 .menu {
   position: absolute;
   top: 55px;
@@ -436,7 +432,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
   }
 
   &-logo {
