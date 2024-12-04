@@ -44,7 +44,7 @@ p {
   }
 
   &-logo img {
-    max-height: 40px;
+    min-width: 200px;
   }
 
   &-list {
@@ -428,7 +428,7 @@ p {
 
   &-wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
