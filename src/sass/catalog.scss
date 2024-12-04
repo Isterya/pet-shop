@@ -245,8 +245,7 @@ p {
 
   &-grid {
     display: grid;
-    grid-template-rows: repeat(4, 40px);
-    grid-gap: 21px;
+    grid-template-rows: repeat(4, auto);
   }
 
   &-row {
@@ -259,12 +258,16 @@ p {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'name quantity price button';
     align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 
   &-name {
+    grid-area: name;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
@@ -272,8 +275,16 @@ p {
     color: #222222;
   }
 
-  &-quantity,
+  &-quantity {
+    grid-area: quantity;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+  }
+
   &-price {
+    grid-area: price;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -281,11 +292,12 @@ p {
   }
 
   &-button {
+    grid-area: button;
     padding: 10px 26px;
-    width: 244px;
+    width: 100%;
+    max-width: 244px;
     height: 40px;
     background-color: #68b738;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -305,7 +317,7 @@ p {
   &-gift {
     width: 245px;
     height: 245px;
-    background: url('../img/gift-cat.png') center (center/cover) no-repeat;
+    background: url('../img/gift-cat.png') center / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
