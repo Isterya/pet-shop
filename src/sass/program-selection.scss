@@ -456,6 +456,14 @@ p {
   }
 }
 
+.status-message {
+  font-size: 14px;
+  margin-left: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .footer {
   height: 149px;
   display: flex;
