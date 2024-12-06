@@ -46,138 +46,269 @@
       </div>
     </header>
 
-    <section class="form">
-      <h1 class="form__title">Подбор программы</h1>
-      <h2 class="form__subtitle">
-        Заполните анкету, и мы подберем программу питания для вашего кота
-      </h2>
+    <form
+      action="#"
+      id="form"
+    >
+      <section class="form">
+        <h1 class="form__title">Подбор программы</h1>
+        <h2 class="form__subtitle">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </h2>
 
-      <div class="form__wrapper">
-        <div class="form__personal">
-          <div class="form__field">
+        <div class="form__wrapper">
+          <div class="form__personal">
+            <div class="form__field">
+              <label
+                for="name"
+                class="form__label"
+                >ИМЯ:*</label
+              >
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                class="form__input"
+                placeholder="Барсик"
+              />
+            </div>
+
+            <div class="form__field">
+              <label
+                for="weight"
+                class="form__label"
+                >Вес (кг):*</label
+              >
+              <input
+                required
+                type="number"
+                id="weight"
+                name="weight"
+                class="form__input"
+                placeholder="7"
+              />
+            </div>
+
+            <div class="form__field">
+              <label
+                for="age"
+                class="form__label"
+                >Возраст (лет):</label
+              >
+              <input
+                type="number"
+                id="age"
+                name="age"
+                class="form__input"
+                placeholder="7"
+              />
+            </div>
+          </div>
+
+          <div class="form__program">
+            <label class="form__option">
+              <input
+                type="radio"
+                name="option"
+                class="form__radio"
+              />
+              похудение
+            </label>
+            <label class="form__option">
+              <input
+                type="radio"
+                name="option"
+                class="form__radio"
+              />
+              Набор массы
+            </label>
+            <label class="form__option">
+              <input
+                type="radio"
+                name="option"
+                class="form__radio"
+              />
+              Не знаю (Нужен ваш совет)
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider">
+        <div class="divider-left"></div>
+        <div class="divider-text">Контактные данные (владельца кота)</div>
+        <div class="divider-right"></div>
+      </div>
+
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__field">
             <label
-              for="name"
-              class="form__label"
-              >ИМЯ:*</label
+              for="email"
+              class="contacts__label"
+              >E-mail:*</label
             >
             <input
               required
-              type="text"
-              id="name"
-              class="form__input"
-              placeholder="Барсик"
+              type="email"
+              id="email"
+              class="contacts__input"
+              placeholder="example@gmail.com"
             />
+            <span class="contacts__icon">
+              <img
+                src="./icons/email.svg"
+                alt="contacts-icon"
+              />
+            </span>
           </div>
 
-          <div class="form__field">
+          <div class="contacts__field">
             <label
-              for="weight"
-              class="form__label"
-              >Вес (кг):*</label
+              for="phone"
+              class="contacts__label"
+              >Телефон:*</label
             >
             <input
               required
-              type="number"
-              id="weight"
-              class="form__input"
-              placeholder="7"
+              type="tel"
+              id="phone"
+              name="phone"
+              class="contacts__input"
+              placeholder="8 (960) 900-60-90"
             />
-          </div>
-
-          <div class="form__field">
-            <label
-              for="age"
-              class="form__label"
-              >Возраст (лет):</label
-            >
-            <input
-              type="number"
-              id="age"
-              class="form__input"
-              placeholder="7"
-            />
+            <span class="contacts__icon">
+              <img
+                src="./icons/phone.svg"
+                alt="contacts-icon"
+              />
+            </span>
           </div>
         </div>
+      </section>
 
-        <div class="form__program">
-          <label class="form__option">
-            <input
-              type="radio"
-              name="option"
-              class="form__radio"
-            />
-            похудение
-          </label>
-          <label class="form__option">
-            <input
-              type="radio"
-              name="option"
-              class="form__radio"
-            />
-            Набор массы
-          </label>
-          <label class="form__option">
-            <input
-              type="radio"
-              name="option"
-              class="form__radio"
-            />
-            Не знаю (Нужен ваш совет)
-          </label>
-        </div>
+      <div class="divider">
+        <div class="divider-left"></div>
+        <div class="divider-text">Комментарий</div>
+        <div class="divider-right"></div>
       </div>
-    </section>
 
-    <div class="divider">
-      <div class="divider-left"></div>
-      <div class="divider-text">Контактные данные (владельца кота)</div>
-      <div class="divider-right"></div>
-    </div>
-
-    <section class="contacts">
-      <div class="contacts__wrapper">
-        <div class="contacts__field">
-          <label
-            for="email"
-            class="contacts__label"
-            >E-mail:*</label
-          >
-          <input
-            required
-            type="email"
-            id="email"
-            class="contacts__input"
-            placeholder="example@gmail.com"
-          />
-          <span class="contacts__icon">
-            <img
-              src="./icons/email.svg"
-              alt="contacts-icon"
-            />
-          </span>
+      <section class="comment">
+        <div class="comment__wrapper">
+          <textarea
+            id="comment"
+            class="comment__textarea"
+            placeholder="Расскажите обо всех повадках кота"
+          ></textarea>
         </div>
+      </section>
 
-        <div class="contacts__field">
-          <label
-            for="phone"
-            class="contacts__label"
-            >Телефон:*</label
-          >
-          <input
-            required
-            type="tel"
-            id="phone"
-            class="contacts__input"
-            placeholder="8 (960) 900-60-90"
-          />
-          <span class="contacts__icon">
-            <img
-              src="./icons/phone.svg"
-              alt="contacts-icon"
-            />
-          </span>
-        </div>
+      <div class="divider">
+        <div class="divider-left"></div>
+        <div class="divider-text">Дополнительно</div>
+        <div class="divider-right"></div>
       </div>
-    </section>
+
+      <section class="optional">
+        <div class="optional__wrapper">
+          <div class="checkbox">
+            <label class="checkbox__wrapper">
+              <input
+                type="checkbox"
+                class="checkbox__input"
+              />
+              <span class="checkbox__custom"></span>
+              сахарозаменитель
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label class="checkbox__wrapper">
+              <input
+                type="checkbox"
+                class="checkbox__input"
+              />
+              <span class="checkbox__custom"></span>
+              питьевая вода
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label class="checkbox__wrapper">
+              <input
+                type="checkbox"
+                class="checkbox__input"
+              />
+              <span class="checkbox__custom"></span>
+              молоко
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label class="checkbox__wrapper">
+              <input
+                type="checkbox"
+                class="checkbox__input"
+              />
+              <span class="checkbox__custom"></span>
+              витамины
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="submit">
+        <div class="submit__triggers">
+          <button
+            type="submit"
+            class="submit__btn"
+          >
+            Отправить заявку
+          </button>
+          <div class="submit__require">* — Обязательные поля</div>
+        </div>
+      </section>
+    </form>
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a href="#">
+            <img
+              src="./icons/footer-logo.svg"
+              alt="footer-logo"
+              class="footer-logo__image"
+            />
+          </a>
+        </div>
+        <div class="footer-socials">
+          <a href="#">
+            <img
+              src="./icons/social/vk.svg"
+              alt="social-vk"
+              class="footer-socials__icon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="./icons/social/instagram.svg"
+              alt="social-inst"
+              class="footer-socials__icon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="./icons/social/facebook.svg"
+              alt="social-facebook"
+              class="footer-socials__icon"
+            />
+          </a>
+        </div>
+        <div class="footer-text">© 2024 Cat Energy</div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
