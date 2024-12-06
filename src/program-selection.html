@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Program Selection | Cat Energy</title>
+    <link
+      rel="stylesheet"
+      href="./css/program-selection.min.css"
+    />
+  </head>
+  <body>
+    <header class="menu">
+      <div class="menu-wrapper">
+        <div class="menu-logo">
+          <a href="/">
+            <img
+              src="./icons/logo.svg"
+              alt="logotype"
+            />
+          </a>
+        </div>
+
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a href="/">главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="/catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="/program-selection.html">подбор программы</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#">
+              <img
+                src="./icons/cart-dark.svg"
+                alt="cart"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="form">
+      <h1 class="form__title">Подбор программы</h1>
+      <h2 class="form__subtitle">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </h2>
+
+      <div class="form__wrapper">
+        <div class="form__personal">
+          <div class="form__field">
+            <label
+              for="name"
+              class="form__label"
+              >ИМЯ:*</label
+            >
+            <input
+              required
+              type="text"
+              id="name"
+              class="form__input"
+              placeholder="Барсик"
+            />
+          </div>
+
+          <div class="form__field">
+            <label
+              for="weight"
+              class="form__label"
+              >Вес (кг):*</label
+            >
+            <input
+              required
+              type="number"
+              id="weight"
+              class="form__input"
+              placeholder="7"
+            />
+          </div>
+
+          <div class="form__field">
+            <label
+              for="age"
+              class="form__label"
+              >Возраст (лет):</label
+            >
+            <input
+              type="number"
+              id="age"
+              class="form__input"
+              placeholder="7"
+            />
+          </div>
+        </div>
+
+        <div class="form__program">
+          <label class="form__option">
+            <input
+              type="radio"
+              name="option"
+              class="form__radio"
+            />
+            похудение
+          </label>
+          <label class="form__option">
+            <input
+              type="radio"
+              name="option"
+              class="form__radio"
+            />
+            Набор массы
+          </label>
+          <label class="form__option">
+            <input
+              type="radio"
+              name="option"
+              class="form__radio"
+            />
+            Не знаю (Нужен ваш совет)
+          </label>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

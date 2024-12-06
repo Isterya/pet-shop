@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul,
+li,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 110px;
+  }
+
+  &-logo img {
+    min-width: 200px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    gap: 35px;
+
+    &__item {
+      font-weight: 400;
+      font-size: 20px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: #68b738;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+
+      &:last-child a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        img {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+          transform: rotate(15deg);
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  padding: 187px 112px 65px 111px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  &__subtitle {
+    margin-top: 56px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    max-width: 320px;
+  }
+
+  &__wrapper {
+    margin: 66px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // input part
+
+  &__personal {
+    max-width: 569px;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #444444;
+    margin-right: 13px;
+  }
+
+  &__input {
+    border: 1px solid #e7e7e7;
+    width: 440px;
+    height: 52px;
+    padding: 10px 20px;
+    outline: none;
+
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #444444;
+
+    &:hover {
+      border: 1px solid #cdcdcd;
+    }
+
+    &:focus {
+      border: 2px solid #444444;
+    }
+  }
+
+  // radio part
+
+  &__program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid #e7e7e7;
+    width: 568px;
+    padding: 25px;
+  }
+
+  &__option {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #222222;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__radio {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: #4caf50;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+      background-color: transparent;
+      border-radius: 50%;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    &:checked {
+      border-color: #4caf50;
+    }
+
+    &:checked::before {
+      background-color: #4caf50;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+}
